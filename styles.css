@@ -5,11 +5,41 @@
     display: flex;
     color: white;
 }
+svg {
+    fill: white;
+}
+svg:hover {
+    fill: red;
+}
 
 aside {
     width: 25%;
     height: 100%;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2% 0 30% 2%;
+}
+.dashboard {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    h2 {
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+    }
+    svg {
+        height: 2rem;
+    }
+    
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
 }
 
 .container {
@@ -26,11 +56,36 @@ header {
     width: 100%;
     height: 40%;
     background-color: rgb(110, 126, 145);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg {
+        width: 2rem;
+    }
+
 }
+.search-container {
+    display: flex;
+}
+.search-container input {
+    border-radius: .8rem;
+}
+
 nav {
     width: 100%;
     height: 60%;
     background-color: rgb(38, 100, 170);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.user-container {
+    display: flex;
+    gap: 1rem;
+}
+.user-dates {
+    display: flex;
 }
 
 main {
@@ -44,7 +99,7 @@ main {
     background-color: #a02020;
     padding: 1rem 1rem;
 }
-h2 {
+.title {
     
 }
 .cards-grid {
@@ -54,13 +109,24 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 27%);
     gap: 1rem;
-    
 }
-article {
+
+.cards-grid article {
     width: 100%;
     height: 100%;
     background: #000;
     align-self: center;
+    padding: 1rem;
+    font-size: 0.6em;
+    border-left: solid white 0.3rem;
+}
+
+.container-icon {
+    display: flex;
+    height: 30%;
+    align-items: center;
+    justify-content:flex-end;
+    gap: 1rem;
 }
 
 .info {
@@ -72,13 +138,45 @@ article {
     justify-content: space-evenly;
     align-items: center;    
 }
-.announcements {
+.container-announcements {
     width: 80%;
-    height: 30%;
-    background-color: #fff;
+    /*height: 30%;*/
+    background-color: #598b4a;
+    
+}
+.announcements {
+    background-color: #2963a5;
+    /*height: 90%;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.container-trending {
+    width: 80%;
+    /*height: 30%;*/
+    background-color: #464343;
+    
 }
 .trending {
-    width: 80%;
-    height: 30%;
-    background-color: #464343;
+    padding: .5rem;
+    background-color: #4ca33a;
+}
+.trending section {
+    display: flex;
+}
+
+.announcements, .trending, .cards-grid article {
+    border-radius: 0.29rem;
+}
+
+button {
+    padding: .1rem 1rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: #6b0f0f;
+}
+.info p {
+    font-size: .5em;
 }
