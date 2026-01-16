@@ -20,9 +20,7 @@ a {
 }
 
 .layout-wrapper {
-    background-color: red;
     width: 100vw;
-    height: 100vh;
     display: flex;
 }
 aside svg {
@@ -33,8 +31,7 @@ svg:hover {
 }
 
 aside {
-    width: 25%;
-    height: 100%;
+    width: 20%;
     background-color: var(--color-aside);
     display: flex;
     flex-direction: column;
@@ -64,7 +61,7 @@ aside {
 
 h2 {
     font-size: 1.5rem;
-    margin-left: 0.5rem;
+    margin-left: .5rem;
 }
 
 ul {
@@ -78,31 +75,32 @@ a svg {
 }
 .container {
     width: 100%;
-    height: 100%;
-    /*background-color: #464343;*/
 }
 
 header {
     width: 100%;
-    height: 20%;
-    padding-top: 2%;
-    padding-right: 3%;
+    height: 11rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    padding-bottom: 0;
 }
 .search {
     width: 100%;
-    height: 40%;
-    background-color: var(--color-white);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
     svg {
         width: 2rem;
     }
 }
 .search-container {
     display: flex;
+    gap: 1rem;
 }
 .search-container input {
+    width: 55rem;
+    padding-left: 2rem;
     border-radius: .8rem;
     border: none;
     background-color: var(--color-fondo);
@@ -115,7 +113,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 .user-container {
     display: flex;
@@ -132,33 +130,74 @@ nav {
 
 main {
     width: 100%;
-    height: 80%;
     display: flex;
 }
-.cards-section {
-    width: 80%;
-    height: 100%;
+.container-cards {
     background-color: var(--color-fondo);
+    padding-top: 2.5rem;
+}
+.cards-section {
+    background-color: var(--color-fondo);
+    padding: 0 3rem 3rem 3rem ;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+.card-title {
+    padding-left: 3rem;
+}
+
+.target {
+    background-color: #fff;
+    border-radius: .5rem;
     padding: 2rem;
 }
 
-.cards-grid {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 27%);
-    gap: 2rem;
+.card-1, .card-2, .card-3, .card-4, .card-5, .card-6 {
+    border-left: 0.6rem solid var(--color-franja);
 }
 
-.cards-grid article {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-white);
-    align-self: center;
-    padding: 1.5rem 1rem;
-    font-size: 1.2em;
-    border-left: solid var(--color-franja) 0.5rem;
+.container-ann-tren {
+    padding: 0 3rem 0 0;
+    background-color: var(--color-fondo);
+}
+.announcements, .trending {
+    font-size: .7rem;
+}
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h5{
+        font-size: .9rem;
+    }
+    p {
+        font-size: .8rem;
+    }
+}
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h5{
+        font-size: .9rem;
+    }
+    p {
+        font-size: .8rem;
+    }
+}
+.trending section {
+    display: flex;
+    align-items: center;
+}
+.avatar-trending {
+    width: 2.3rem;
+    margin-right: 1rem;
+}
+hr {
+    border: rgb(175, 175, 175) .1px solid;
 }
 
 .container-icon {
@@ -169,60 +208,15 @@ main {
     gap: 1rem;
 }
 
-.info {
-    width: 20%;
-    height: 100%;
-    background-color: var(--color-fondo);
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-}
 .container-announcements {
-    width: 80%;
-    /*height: 30%;*/
-    /*background-color: #598b4a;*/
-    font-size: 1.5rem;
-    
+    margin-top: 2rem;
 }
-.announcements {
-    background-color: var(--color-white);
-    /*height: 90%;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
-    gap: 1rem;
-    font-size: 1rem;
+.container-trending {
+    margin-top: 1.5rem;
 }
 
-.container-trending {
-    width: 80%;
-    margin-top: 1rem;
-    /*height: 30%;*/
-    /*background-color: #464343;*/
-    font-size: 1.5rem;
-    
-}
-.trending {
-    padding: .5rem;
-    background-color: var(--color-white);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
-}
-.trending section {
-    display: flex;
-}
 .icon {
     width: 1rem;
-}
-.avatar-trending {
-    width: 30%;
-    margin-right: 1rem;
-}
-.announcements, .trending, .cards-grid article {
-    border-radius: 0.29rem;
 }
 
 button {
@@ -232,7 +226,6 @@ button {
     background-color: var(--color-button);
     border: none;
     cursor: pointer;
+    margin-left: 3rem;
 }
-.info p {
-    font-size: .8em;
-}
+
